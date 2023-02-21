@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+<style> *{ font-size: 20pt; }</style>
+
+<script>
+    var info='', message='', result='' ;  //전역변수 
+
+    var str = 'lgYc CITY kim HI';
+    document.write(str.toLowerCase() , '<br>');
+    document.write(str.toUpperCase(), '<br>');
+    document.write( '<br>');
+
+    var msg='서울 구로구 서울 하이미디어  서울화이팅' ;
+    //문제1  replaceAll(구,신) 서울  글자 seoul영어변경 
+    document.write(msg.replace('서울', 'seoul'), '<br>')
+    document.write(msg.replaceAll('서울', 'seoul'), '<br>')
+    document.write( '<br>');
+
+    var jumin="890729-1065913"; 
+    //문제2 charAt(숫자)  남자인지,여자인지
+    var gender = jumin.charAt(7);
+    if(gender=='1' || gender=='3'){info='남자입니다';}
+    else if(gender=='2' || gender=='4'){info='여자입니다';}
+    else{info='성별기입 오류입니다'; }
+    document.write( info , '<br>');
+
+    //문제3 substring(시작,끝+1) 권장substr(시작,길이)
+    //당신의 생일 07월 29일입니다 
+    var a = jumin.substr(2,2);
+    var b = jumin.substr(4,2);
+    document.write( '당신의 생일은 ' , a ,'월 ' ,b ,'일입니다<br>');
+
+    var c = jumin.substring(2,4); //끝+1
+    var d = jumin.substring(4,6); //끝+1
+    document.write( '당신의 생일은 ' , c ,'월 ' ,d ,'일입니다<br>');
+
+    //var jumin="890729-1065913";
+    //document.write(  , '<br>');
+
+    //문제4 문자열길이 length
+    var jumin1="89729"; //6자릿수
+    var jumin2="1065913"; //7자릿수
+    var size1=0,size2=0;
+    size1 = jumin1.length;
+    size2 = jumin2.length;
+    if(size1 != 6 ){
+        info='주민앞번호 잘못되었습니다'; 
+        document.write( info , '<br>');
+    }
+
+    if(size2 != 7 ){
+        info='주민뒷번호 잘못되었습니다'; 
+        document.write( info , '<br>');
+    }
+
+    //388페이지참고로 배열의길이도 length
+</script>
+</head>
+<body>
+    <!-- 386page 문자열예제기술, 384페이지설명참고  -->
+
+</body>
+</html>
